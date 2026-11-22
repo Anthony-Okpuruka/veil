@@ -1,0 +1,6 @@
+{
+  "name": "Artenos",
+  "description": "An interactive interstellar starfield hero experience where particles form and blend into Artenos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

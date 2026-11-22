@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Fira Sans", system-ui, -apple-system, sans-serif;
+
+  --color-artenos-black: #08080B;
+  --color-artenos-charcoal: #111015;
+  --color-artenos-surface: #17141C;
+  --color-artenos-surface-secondary: #211B27;
+  --color-artenos-gold: #D8BD83;
+  --color-artenos-gold-antique: #C5A46D;
+  --color-artenos-violet: #76618F;
+  --color-artenos-violet-deep: #40304F;
+  --color-artenos-ink: #F3EFE8;
+  --color-artenos-muted: #A59BAA;
+  --color-artenos-border: #302A34;
+}
+
+:root {
+  color-scheme: dark;
+  --artenos-bg: #08080B;
+  --artenos-charcoal: #111015;
+  --artenos-surface: #17141C;
+  --artenos-surface-secondary: #211B27;
+  --artenos-gold: #D8BD83;
+  --artenos-gold-antique: #C5A46D;
+  --artenos-violet: #76618F;
+  --artenos-violet-deep: #40304F;
+  --artenos-ink: #F3EFE8;
+  --artenos-muted: #A59BAA;
+  --artenos-border: #302A34;
+}
+
+html {
+  background-color: var(--artenos-bg);
+  color: var(--artenos-ink);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--artenos-bg);
+  color: var(--artenos-ink);
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+/* Subtle interstellar nebula & cosmic dust glow */
+.artenos-ambient-glow {
+  background:
+    radial-gradient(55% 42% at 50% 48%, rgba(64, 48, 79, 0.26) 0%, rgba(17, 16, 21, 0) 72%),
+    radial-gradient(38% 30% at 36% 44%, rgba(118, 97, 143, 0.12) 0%, rgba(8, 8, 11, 0) 70%),
+    radial-gradient(36% 28% at 64% 54%, rgba(216, 189, 131, 0.07) 0%, rgba(8, 8, 11, 0) 72%);
+}
+
+/* Accessible focus ring */
+.artenos-focus:focus-visible {
+  outline: 1.5px solid var(--artenos-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@keyframes blackhole-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blackhole-reverse-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes accretion-pulse {
+  0%, 100% {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-accretion-pulse {
+  animation: accretion-pulse 3.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
